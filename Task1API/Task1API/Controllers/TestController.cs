@@ -23,7 +23,7 @@ namespace Task1API.Controllers
             try
             {
                 var models = _testGet.TestData();
-                return models;
+                return Ok(models);
             }
             catch(Exception ex)
             {
@@ -37,7 +37,7 @@ namespace Task1API.Controllers
             try
             {
                 var req = _testPost.Request(model);
-                return req;
+                return Ok(req);
             }
             catch(Exception ex)
             {
