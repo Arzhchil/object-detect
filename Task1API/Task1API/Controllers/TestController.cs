@@ -32,11 +32,11 @@ namespace Task1API.Controllers
         }
 
         [HttpPost("/postTest")]
-        public ActionResult<int> PostTest(TestPostModel model)
+        public ActionResult<TestPostModel> PostTest(TestPostModel model)
         {
             try
             {
-                int req = _testPost.Request(model);
+                var req = _testPost.Request(model);
                 return req;
             }
             catch(Exception ex)

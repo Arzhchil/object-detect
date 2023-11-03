@@ -1,14 +1,18 @@
-﻿using Task1API.Interface;
+﻿using Microsoft.AspNetCore.Mvc;
+using Task1API.Interface;
 using Task1API.Models;
 
 namespace Task1API.Services
 {
     public class PostTestService : IPostTest
     {
-        public int Request(TestPostModel model)
+        public ActionResult<TestPostModel> Request(TestPostModel model)
         {
-            int value = model.value * 3;
-            return value;
+            TestPostModel req = new TestPostModel()
+            {
+                value = 3 * model.value
+            };
+            return req;
         }
     }
 }
