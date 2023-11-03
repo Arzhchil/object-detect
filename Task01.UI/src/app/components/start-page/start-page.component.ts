@@ -14,7 +14,6 @@ export class StartPageComponent {
   constructor(
     private postModelService: PostModelService,
   ) { }
-
   submit(postnum: PostModel) {
     let t = this;
     t.postModelService.PostModel(postnum)
@@ -23,5 +22,4 @@ export class StartPageComponent {
         error: error => console.log(error)
       });
   }
-
 }

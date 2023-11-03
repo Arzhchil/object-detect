@@ -13,22 +13,8 @@ export class SecondPageComponent {
   models: GetModel[] = [];
   constructor(
     private getModelService: GetModelService,
-    private postModelService: PostModelService,
     private router: Router
   ) { }
-
-
-  //public async getFM(PostModel: postModel) {
-  //  let t = this;
-  //  await lastValueFrom(t.postModelService.PostModel(postModel))
-  //    .then(response => {
-  //      t.PostModel.firstName = response.vectorRec;
-  //      t.recommendationGroups = response.newRec;
-  //    })
-  //    .catch(ex => {
-  //      t.modalService.showErrorModal("Не могу получить группы по вектору")
-  //    })
-  //}
   ngOnInit(): void {
     this.getModelService
       .GetModel()
