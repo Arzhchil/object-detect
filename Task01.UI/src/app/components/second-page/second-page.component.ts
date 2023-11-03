@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Model } from 'src/app/shared/models';
-import { ModelService } from 'src/app/shared/services';
+import { GetModel, PostModel } from 'src/app/shared/models';
+import { elementAt, lastValueFrom } from 'rxjs';
+import { GetModelService, PostModelService } from 'src/app/shared/services';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,14 +10,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./second-page.component.css']
 })
 export class SecondPageComponent {
-  models: Model[] = [];
+  models: GetModel[] = [];
   constructor(
-    private ModelService: ModelService,
+    private getModelService: GetModelService,
+    private postModelService: PostModelService,
     private router: Router
-  ){ }
+  ) { }
+
+
+  //public async getFM(PostModel: postModel) {
+  //  let t = this;
+  //  await lastValueFrom(t.postModelService.PostModel(postModel))
+  //    .then(response => {
+  //      t.PostModel.firstName = response.vectorRec;
+  //      t.recommendationGroups = response.newRec;
+  //    })
+  //    .catch(ex => {
+  //      t.modalService.showErrorModal("Не могу получить группы по вектору")
+  //    })
+  //}
   ngOnInit(): void {
-    this.ModelService
+    this.getModelService
       .GetModel()
-      .subscribe((result: Model[]) => (this.models = result));
+      .subscribe((result: GetModel[]) => (this.models = result));
   }
 }

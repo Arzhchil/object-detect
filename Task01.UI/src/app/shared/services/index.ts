@@ -1,1 +1,2 @@
-export * from './model.service';
+export * from './getModel.service';
+export * from './postModel.service';
