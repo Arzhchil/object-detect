@@ -9,18 +9,20 @@ namespace Task1API.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
-        private readonly ITest _test;
-        public TestController(ITest test)
+        private readonly IGetTest _testGet;
+        private readonly IPostTest _testPost;
+        public TestController(IGetTest testGet, IPostTest testPost)
         {
-            _test = test;
+            _testGet = testGet;
+            _testPost = testPost;
         }
 
-        [HttpPost("/postTest")]
-        public ActionResult<List<TestModel>> PostTest()
+        [HttpGet("/getTest")]
+        public ActionResult<List<TestGetModel>> PostTest()
         {
             try
             {
-                var models = _test.TestData();
+                var models = _testGet.TestData();
                 return models;
             }
             catch(Exception ex)
@@ -29,12 +31,13 @@ namespace Task1API.Controllers
             }
         }
 
-        [HttpGet("/getTest")]
+        [HttpPost("/postTest")]
         public ActionResult<int> GetTest(int value)
         {
             try
             {
-                return 3 * value;
+                int req = _testPost.Request(value);
+                return req;
             }
             catch(Exception ex)
             {

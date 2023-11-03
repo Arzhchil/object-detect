@@ -3,16 +3,16 @@ using Task1API.Models;
 
 namespace Task1API.Services
 {
-    public class TestService : ITest
+    public class GetTestService : IGetTest
     {
-        private static List<TestModel> models = new List<TestModel>()
+        private static List<TestGetModel> models = new List<TestGetModel>()
         {
-            new TestModel()
+            new TestGetModel()
             {
                 firstName = "Danila",
                 middleName = "Sergeevich"
             },
-            new TestModel() 
+            new TestGetModel() 
             {
                 firstName = "Arzhan",
                 middleName = "Alexandrovich"
@@ -22,7 +22,7 @@ namespace Task1API.Services
         /// test service
         /// </summary>
         /// <returns></returns>
-        public List<TestModel> TestData()
+        public List<TestGetModel> TestData()
         {
             return models;
         }

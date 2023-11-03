@@ -12,7 +12,8 @@ namespace Task1API.Services.ConnectionService
         /// <param name="builder"></param>
         public static void ConnectService(WebApplicationBuilder builder)
         {
-            builder.Services.AddTransient<ITest, TestService>();
+            builder.Services.AddTransient<IGetTest, GetTestService>();
+            builder.Services.AddTransient<IPostTest, PostTestService>();
         }
     }
 }
