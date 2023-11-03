@@ -1,12 +1,14 @@
 ﻿using Task1API.Interface;
+using Task1API.Models;
 
 namespace Task1API.Services
 {
     public class PostTestService : IPostTest
     {
-        public int Request(int value)
+        public int Request(TestPostModel model)
         {
-            return 3 * value;
+            int value = model.value * 3;
+            return value;
         }
     }
 }
