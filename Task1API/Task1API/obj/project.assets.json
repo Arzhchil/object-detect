@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Данила\\source\\repos\\Task1API\\Task1API\\Task1API.csproj",
+      "projectUniqueName": "C:\\devTask1\\Task_1\\Task1API\\Task1API\\Task1API.csproj",
       "projectName": "Task1API",
-      "projectPath": "C:\\Users\\Данила\\source\\repos\\Task1API\\Task1API\\Task1API.csproj",
+      "projectPath": "C:\\devTask1\\Task_1\\Task1API\\Task1API\\Task1API.csproj",
       "packagesPath": "C:\\Users\\Данила\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Данила\\source\\repos\\Task1API\\Task1API\\obj\\",
+      "outputPath": "C:\\devTask1\\Task_1\\Task1API\\Task1API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Данила\\AppData\\Roaming\\NuGet\\NuGet.Config",

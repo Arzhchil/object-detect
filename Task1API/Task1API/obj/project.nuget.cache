@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lpEvevrwe8VjAzNlDI4cH4r7Okb8ZXJRka0EixiQgTP3HuhVMff4i4Omw9w1sbq4+ct7C/JlI6A6Riv4uUWJgg==",
+  "dgSpecHash": "fVYIt6IV4JYnjwukalAExx0/x+5YWBvGrv0SobdRdzzGWeJMq25fwNi06LLZkUKHg9Ze3mtlXkA00DNAta/C4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Данила\\source\\repos\\Task1API\\Task1API\\Task1API.csproj",
+  "projectFilePath": "C:\\devTask1\\Task_1\\Task1API\\Task1API\\Task1API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.7\\microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
