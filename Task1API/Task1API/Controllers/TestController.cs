@@ -18,7 +18,7 @@ namespace Task1API.Controllers
         }
 
         [HttpGet("/getTest")]
-        public ActionResult<List<TestGetModel>> PostTest()
+        public ActionResult<List<TestGetModel>> GetTest()
         {
             try
             {
@@ -32,7 +32,7 @@ namespace Task1API.Controllers
         }
 
         [HttpPost("/postTest")]
-        public ActionResult<int> GetTest(int value)
+        public ActionResult<int> PostTest(int value)
         {
             try
             {
