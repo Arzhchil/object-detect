@@ -1,14 +1,19 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">FirstName</th>
-        <th scope="col">Middle Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let model of models">
-        <td>{{ model.firstName }}</td>
-        <td>{{ model.middleName }}</td>
-      </tr>
-    </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="span">
+      <p>Drop Zone</p>
+      <div class="custom-dropzone" ngx-dropzone [accept]="'*'" [expandable]="true" (change)="onSelect($event)">
+        <ngx-dropzone-label>
+          <div>
+            <h2>My custom dropzone</h2>
+          </div>
+        </ngx-dropzone-label>
+        <ngx-dropzone-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f"
+          [removable]="true" (removed)="onRemove(f)">
+          <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+        </ngx-dropzone-preview>
+      </div>
+      <button class="btn btn-primary" (click)="submit(filesModel)">Загрузить файлы</button>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { GetModel, PostModel } from 'src/app/shared/models';
-import { GetModelService, PostModelService } from 'src/app/shared/services';
+import { PostModel } from 'src/app/shared/models';
+import { PostModelService } from 'src/app/shared/services';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-start-page',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class StartPageComponent {
   postnum: PostModel = new PostModel(2); // вводимое число
-  receivedNum: PostModel | undefined; // полученное чисо
+  receivedNum: PostModel // полученное чисо
   done: boolean = false;
   constructor(
     private postModelService: PostModelService,

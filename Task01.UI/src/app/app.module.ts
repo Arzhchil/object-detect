@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { SecondPageComponent } from './components/second-page/second-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    NgxDropzoneModule
   ],
   providers: [],
   bootstrap: [AppComponent]
