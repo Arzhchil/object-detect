@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { GetModel, PostModel } from 'src/app/shared/models';
-import { elementAt, lastValueFrom } from 'rxjs';
-import { GetModelService, PostModelService } from 'src/app/shared/services';
+import { GetModel } from 'src/app/shared/models';
+import { GetModelService } from 'src/app/shared/services';
 import { Router } from '@angular/router';
 
 @Component({
@@ -20,4 +19,7 @@ export class SecondPageComponent {
       .GetModel()
       .subscribe((result: GetModel[]) => (this.models = result));
   }
+
+
 }
+
