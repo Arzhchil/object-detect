@@ -8,12 +8,14 @@ import { StartPageComponent } from './components/start-page/start-page.component
 import { SecondPageComponent } from './components/second-page/second-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { PreloaderComponent } from './shared/components/preloader/preloader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartPageComponent,
-    SecondPageComponent
+    SecondPageComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
