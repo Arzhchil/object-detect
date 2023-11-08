@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SecondPageComponent } from '../../../components/second-page/second-page.component'
-import { FileService } from 'src/app/shared/services';
 
 @Component({
   selector: 'ml-response',

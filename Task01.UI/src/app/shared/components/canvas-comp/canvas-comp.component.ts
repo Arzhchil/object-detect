@@ -29,12 +29,9 @@ export class CanvasCompComponent implements AfterViewInit {
       }
     }
     canvas.addEventListener('click', function (event: MouseEvent) {
-      //debugger;
       let x = event.clientX;
       let y = event.clientY;
-
       console.log(x, y + ' ' + 'client')
-
       ctx.strokeStyle = 'red';
       ctx.strokeRect(x - (recWidth / 2), (y - recHeight / 2), recWidth, recHeight);
     })

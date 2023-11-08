@@ -172,7 +172,8 @@
           <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
         </ngx-dropzone-video-preview>
       </div>
-      <button class="btn fileupload__btn btn-primary" (click)="Upload(files)">Загрузить файлы</button>
+      <button class="btn fileupload__btn btn-primary" (click)="Upload()">Загрузить файлы</button>
+      <!--<button class="btn fileupload__btn btn-primary" (click)="fileUpload(files)">Загрузить файлы</button>-->
     </div>
 
     <div class="section section__uploaded-video">

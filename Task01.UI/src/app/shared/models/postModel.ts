@@ -1,3 +1,3 @@
 export class PostModel {
-  public file: File[];
+  public file: File;
 }
