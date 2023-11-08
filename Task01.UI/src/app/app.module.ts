@@ -9,13 +9,17 @@ import { SecondPageComponent } from './components/second-page/second-page.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { PreloaderComponent } from './shared/components/preloader/preloader.component';
+import { MlResponseComponent } from './shared/components/ml-response/ml-response.component';
+import { CanvasCompComponent } from './shared/components/canvas-comp/canvas-comp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartPageComponent,
     SecondPageComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    MlResponseComponent,
+    CanvasCompComponent
   ],
   imports: [
     BrowserModule,

@@ -172,7 +172,7 @@
           <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
         </ngx-dropzone-video-preview>
       </div>
-      <button class="btn fileupload__btn btn-primary" (click)="fileUpload(files)">Загрузить файлы</button>
+      <button class="btn fileupload__btn btn-primary" (click)="Upload(files)">Загрузить файлы</button>
     </div>
 
     <div class="section section__uploaded-video">
@@ -190,11 +190,9 @@
 
     <app-preloader *ngIf="done"></app-preloader>
 
-    <!--<div class="row">
-      <div class="generated__snaps">
+    <ml-response></ml-response>
 
-      </div>
-    </div>-->
+
   </div>
 
 </section>

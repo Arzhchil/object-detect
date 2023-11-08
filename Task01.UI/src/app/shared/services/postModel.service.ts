@@ -8,7 +8,7 @@ import { PostModel } from '../models';
 })
 export class PostModelService {
   errorMessage: String = "HttpError";
-  private url = "/postTest";
+  private url = "/postFile";
   constructor(private http: HttpClient) { }
   public PostModel(PostModel: PostModel): Observable<PostModel> {
     return this.http.post<PostModel>(environment.apiUrl + this.url, PostModel);

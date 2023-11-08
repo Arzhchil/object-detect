@@ -1,4 +1,3 @@
-export class PostModel{
-  constructor(
-    public value: number,){}
+export class PostModel {
+  public file: File[];
 }
