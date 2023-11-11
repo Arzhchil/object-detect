@@ -1,3 +1,3 @@
-export * from './getModel.service';
-export * from './postModel.service';
+export * from './getResponseModel.service';
+export * from './postRetrainingModel.service';
 export * from './uploadFiles.service'
