@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+Pillow
+ultralytics
+opencv-python
+numpy
+imageio
+matplotlib
+moviepy
+argparse
