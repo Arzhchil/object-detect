@@ -1,27 +1,7 @@
-<!--<div class="container">
-  <div class="row">
-    <div class="span">
-      <p>Drop Zone</p>
-      <div class="custom-dropzone" ngx-dropzone [accept]="'*'" [expandable]="true" (change)="onSelect($event)">
-        <ngx-dropzone-label>
-          <div>
-            <h2>My custom dropzone</h2>
-          </div>
-        </ngx-dropzone-label>
-        <ngx-dropzone-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f"
-          [removable]="true" (removed)="onRemove(f)">
-          <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
-        </ngx-dropzone-preview>
-      </div>
-
-      <button class="btn btn-primary" (click)="fileRead(files)">Загрузить файлы</button>
-    </div>
-  </div>
-</div>-->
 <section class="section header__section">
   <div class="container header__container">
     <div class="row">
-      <div class="span">
+      <div class="span header__content">
         <a href="#" class="logo__link"><svg width="250" viewBox="0 0 2667 600" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_628_48897)">
@@ -161,7 +141,7 @@
     </div>
     <div class="row drop__content">
       <h1 class="title header__title">Загрузите ваш архив</h1>
-      <div class="custom-dropzone" ngx-dropzone [accept]="'*'" [expandable]="true" (change)="onSelect($event)">
+      <div class="custom-dropzone" ngx-dropzone [accept]="'video/*'" [expandable]="true" (change)="onSelect($event)">
         <ngx-dropzone-label>
           <div>
             <h2 class="drop__title">Выберите файл</h2>
@@ -173,27 +153,64 @@
         </ngx-dropzone-video-preview>
       </div>
       <button class="btn fileupload__btn btn-primary" (click)="Upload()">Загрузить файлы</button>
-      <!--<button class="btn fileupload__btn btn-primary" (click)="fileUpload(files)">Загрузить файлы</button>-->
+    </div>
+    <app-preloader *ngIf="preloader"></app-preloader>
+
+    <div class="section section__uploaded-video" *ngIf="emtryTitle">
+      <div class="row">
+        <div class="uploaded__videos">
+          <h2 class="uploaded__title title">Нет загруженных снимков</h2>
+        </div>
+      </div>
     </div>
 
-    <div class="section section__uploaded-video">
-      <div class="row" *ngIf="done">
+    <!--<div class="section section__uploaded-video" *ngIf="done">
+      <div class="row">
         <div class="uploaded__videos">
           <h2 class="uploaded__title title">Загруженные видео</h2>
-          <ul class="uploaded__list list-reset">
-            <li class="uploaded__item" *ngFor="let f of uploadedVideos">
-              {{ f.name }} ({{ f.type }})
+          <ul class="generated__snaps list-reset">
+            <li class="snap__item" *ngFor="let f of uploadedVideos">
+              <h3 class="span__titlte">На снимке присутствует оружие ?</h3>
+              <img id="myImage" class="snap__img" [src]='"../../../assets/img/"+f' alt="snap">
+              <div class="button__group">
+                <button class="btn answer__btn true__btn btn-primary" (click)="appendRetrainImage(f)">Да</button>
+                <button class="btn answer__btn false__btn btn-primary" (click)="deleteImage(f)">Нет</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>-->
+
+    <div class="section section__uploaded-video" *ngIf="done">
+      <div class="row">
+        <div class="uploaded__videos">
+          <h2 class="uploaded__title title">Загруженные видео</h2>
+          <ul class="generated__snaps list-reset">
+            <li class="snap__item" *ngFor="let f of uploadedVideos">
+              <h3 class="span__titlte">На снимке присутствует оружие ?</h3>
+              <canvas class="canvas__class" #canvas></canvas>
+              <img class="img_canvas" #image [src]='"../../../assets/img/"+f' alt="snap">
+
+              <select #select class="form-select" aria-label="Default select example">
+                <option selected>Выберите класс оружия</option>
+                <option value="1">Нож</option>
+                <option value="2">Пистолет</option>
+                <option value="3">Дробовик</option>
+                <option value="4">Винтовка</option>
+              </select>
+
+              <div class="button__group">
+                <button class="btn answer__btn true__btn btn-primary" (click)="appendRetrainImage(f)">Да</button>
+                <button class="btn edit__btn btn-primary" (click)="processImage()">Отредактировать снимок</button>
+                <button class="btn send__btn btn-primary" *ngIf="showSend" (click)="sendMarking(f)">Отправить</button>
+                <button class="btn answer__btn false__btn btn-primary" (click)="deleteImage(f)">Нет</button>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </div>
 
-    <app-preloader *ngIf="done"></app-preloader>
-
-    <ml-response></ml-response>
-
-
   </div>
-
 </section>

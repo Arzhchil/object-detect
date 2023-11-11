@@ -1,3 +1,3 @@
 export class RetrainingModel {
-  public value: boolean
+  public correctImgName: string;
 }

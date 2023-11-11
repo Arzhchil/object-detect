@@ -2,19 +2,18 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/enviroments';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { PostModel } from '../models';
-import { Data } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
-export class PostModelService {
+export class GetResponseService {
   errorMessage: String = "HttpError";
-  private url = "/postFile";
+  private url = "/getBlob";
   constructor(private http: HttpClient) { }
-
-  public PostModel(body: any): Observable<any> {
-    debugger;
-    return this.http.post<any>(environment.apiUrl + this.url, body);
+  public GetResponseModel(): Observable<Blob> {
+    return this.http.get((environment.apiUrl + this.url), {
+      responseType: 'blob'
+    })
   }
 }
 

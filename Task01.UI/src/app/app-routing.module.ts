@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SecondPageComponent } from './components/second-page/second-page.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'start', pathMatch: 'full'},
-  {path : 'second', component : SecondPageComponent},
-  {path : 'start', component : StartPageComponent}
+  { path: '', redirectTo: 'main', pathMatch: 'full'},
+  {path : 'main', component : SecondPageComponent},
+  {path : 'storage', component : StartPageComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
