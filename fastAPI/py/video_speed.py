@@ -2,18 +2,17 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-i','-I','--input',
-                    help='Input Video file')     #输入文件
+                    help='Input Video file')
 parser.add_argument('-o','-U','--output', default = "out_test.mp4",
-                    help='Output Video file, default as "out_test.mp4"')     #输出文件
+                    help='Output Video file, default as "out_test.mp4"')
 parser.add_argument('-r','-R','--ratio', default = 10,
                     type = int,
-                    help='Speed up by ratio, "default = 2"')     #加速比率
+                    help='Speed up by ratio, "default = 2"')
 parser.add_argument('-f','-F','--fps', default = 0,
                     type = int,
-                    help='Speed up by ratio, "default = 2"')     #帧率
+                    help='Speed up by ratio, "default = 2"')
 parser.add_argument('-inf', nargs='?',default=True)
 
-##获取参数
 args = parser.parse_args()
 INPUT = args.input
 OUTPUT = args.output
@@ -38,7 +37,6 @@ if fps_o == 0:
 
 def Video_speed(cap, OUTPUT):
     Out_size = (int(Video_w),int(Video_h))
-    # fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
     videowriter = cv2.VideoWriter(OUTPUT,fourcc,fps_o,Out_size)
 
